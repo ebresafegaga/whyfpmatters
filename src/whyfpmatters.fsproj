@@ -8,6 +8,7 @@
   <ItemGroup>
     <Compile Include="Lists.fs" />
     <Compile Include="Tree.fs" />
+    <Compile Include="Newton.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

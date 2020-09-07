@@ -31,8 +31,3 @@ let empty = Sub []
 let maptree f = foldtree (Node << f) (++) empty 
 
 let result' = maptree ((+) 1) a
-
-type Id = Id of int * int 
-
-let abx = Id (12, 12)
-let (Id (dd, _)) = abx

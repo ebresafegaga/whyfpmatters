@@ -7,7 +7,7 @@ let rec sum = function
     | Cons (x, xs) -> x + sum xs
 
 let rec foldr f x = function 
-    | Nil -> x 
+    | Nil -> x
     | Cons (a, l) -> f a (foldr f x l)
 
 let sum' = foldr (+) 0

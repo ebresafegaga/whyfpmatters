@@ -1,4 +1,4 @@
-module Diff
+module Derivative
 
 type 'a listof = Nil | Cons of 'a Lazy * 'a listof Lazy
 

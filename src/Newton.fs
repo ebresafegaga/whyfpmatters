@@ -15,7 +15,7 @@ let rec repeat' f a = seq { yield a; yield! repeat' f (f a) }
 let rec repeat f a = Cons (lazy a, lazy repeat f (f a))
 
 let rec within eps = function  
-    Cons' (a, Lazy (Cons' (b, rest))) -> 
+    | Cons' (a, Lazy (Cons' (b, rest))) -> 
         if abs (a -. b) <= eps 
         then b
         else within eps (Cons (lazy b, rest))
@@ -29,10 +29,3 @@ let rec relative eps = function
         else relative eps (Cons (lazy b, rest))
 
 let relativesqrt a0 eps n = relative eps (repeat (next n) a0) 
-
-let rec destutter = function 
-    | []             -> []
-    | [x]            -> [x]
-    | x :: y :: rest -> 
-        if x = y then destutter (y :: rest)
-        else x :: destutter (y :: rest)

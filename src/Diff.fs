@@ -19,3 +19,4 @@ let easydiff f (x:float) h = (f (x+h) - f x)/h
 
 let halve x = x/2.
 let differentiate h0 f x = map (easydiff f x) (repeat halve h0)
+

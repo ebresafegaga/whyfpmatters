@@ -11,6 +11,7 @@
     <Compile Include="Newton.fs" />
     <Compile Include="Derivative.fs" />
     <Compile Include="Integration.fs" />
+    <Compile Include="AI.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

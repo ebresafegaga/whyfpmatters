@@ -9,7 +9,8 @@
     <Compile Include="Lists.fs" />
     <Compile Include="Tree.fs" />
     <Compile Include="Newton.fs" />
-    <Compile Include="Diff.fs" />
+    <Compile Include="Derivative.fs" />
+    <Compile Include="Integration.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

@@ -2,11 +2,12 @@ module Diff
 
 type 'a listof = Nil | Cons of 'a Lazy * 'a listof Lazy
 
-let (|Cons'|) = function
-    Cons (Lazy a, Lazy rest) -> Cons' (a, rest)
+let (|Cons'|Nil'|) = function
+    | Cons (Lazy a, Lazy rest) -> Cons' (a, rest)
+    | Nil -> Nil'
   
 let rec foldr f x = function 
-    | Nil -> x
+    | Nil' -> x
     | Cons' (a, l) -> f a (foldr f x l)
 
 let map f l = foldr (fun a b -> (Cons (lazy f a, lazy b))) Nil l
